@@ -1,13 +1,4 @@
-<?
-/** 
-* Filename: mysql2json.class.php 
-* Purpose: Convert mysql resultset data into JSON(http://json.org) format
-* Author: Adnan Siddiqi <kadnan@gmail.com> 
-* License: PHP License 
-* Date: Tuesday,June 21, 2006 
-*
-*/
-
+<?php
 
 class mysql2json{
 
