@@ -30,7 +30,7 @@
 				<h1>getTagForm</h1>
 			</header>
 			<div>
-				<form action="../getTag.php" method="post">
+				<form action="getTag.php" method="post">
 					userID: <input type="text" name="userID"></input><br>
 					accessToken: <input type="text" name="accessToken"></input><br>
 					categoryID: <input type="text" name="categoryID"></input><br>

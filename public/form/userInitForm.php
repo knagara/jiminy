@@ -30,7 +30,7 @@
 				<h1>userInitForm</h1>
 			</header>
 			<div>
-				<form action="../userInit.php" method="post">
+				<form action="userInit.php" method="post">
 					userName: <input type="text" name="userName"></input><br>
 					age: <input type="text" name="age"></input><br>
 					sex: <input type="text" name="sex"></input><br>
