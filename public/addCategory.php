@@ -75,7 +75,7 @@ while ($row = mysql_fetch_array($result,MYSQL_ASSOC)) {
   <br>
   <a href="addCategoryForm.html">カテゴリー追加ページヘ</a>
   <br /><br />
-  <a href="getCategory.php">JSONで取得するページヘ</a>
+  <a href="getCategory_test.php">JSONで取得するページヘ</a>
 </div>
 
 </body>
