@@ -3,7 +3,7 @@ $dsn = array(
 'host' => 'localhost',
 'user' => 'root',
 'pass' => '15uvBdBZgP',
-'database' => 'jiminy',
+'database' => 'jiminy2',
 'category' => 'category',
 'info' => 'userInfo'
    );
