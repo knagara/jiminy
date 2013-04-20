@@ -6,7 +6,7 @@ header("Content-type: text/html; charset=UTF-8");
 //データベース接続
 include("db_connect.class.php");
 $con = new db_connect();
-$con->jiminy_connect();
+$dbconn = $con->jiminy_connect();
 
 //テーブル選択
 $table  = 'categoryInfo';

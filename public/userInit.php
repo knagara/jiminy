@@ -6,7 +6,7 @@ header("Content-type: text/html; charset=UTF-8");
 //データベース接続
 include("db_connect.class.php");
 $con = new db_connect();
-$con->jiminy_connect();
+$dbconn = $con->jiminy_connect();
 
 //テーブル選択
 $table  = 'userInfo';
@@ -44,12 +44,16 @@ if (isset($_POST["age"]))
 	 $accessToken = hash("sha256",$unique);
 	 
 	 /* データベースにセット */
+	
 	$sql = "INSERT INTO $table (userName, age, sex, accessToken,setDate) VALUES (\"$userName\",$age,$sex,\"$accessToken\",now())";
 	$result_flag = mysql_query($sql);
 
 	if (!$result_flag) {
 	    echo 'false';
 	}
+	
+	
+	//$res = pg_query_params($dbconn,'INSERT INTO $1 (userName, age, sex, accessToken,setDate) VALUES ($2,$3,$4,$5,now())',array($table,"ええ",$age,$sex,$accessToken));
 	
 	/* userIDとaccessToken をJSONで返す*/
 	include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude
