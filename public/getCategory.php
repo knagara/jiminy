@@ -33,7 +33,7 @@ $table  = 'categoryInfo';
 	
 	/* userIDとaccessToken をJSONで返す*/
 	include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude
-	$result = mysql_query("select categoryName from $table order by priority asc");
+	$result = mysql_query("select categoryName,categoryID from $table order by priority asc");
 	$num = mysql_affected_rows();
 	$objJSON = new mysql2json();
 	print(trim($objJSON->getJSON($result,$num)));
