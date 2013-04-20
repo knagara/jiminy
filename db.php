@@ -1,9 +1,10 @@
 <?php
 $dsn = array(
-'host' => '54.244.121.208',
-'user' => 'testuser',
-'pass' => 'testpass',
+'host' => 'localhost',
+'user' => 'root',
+'pass' => '15uvBdBZgP',
 'database' => 'jiminy',
-'category' => 'category'
+'category' => 'category',
+'info' => 'userInfo'
    );
 ?>
