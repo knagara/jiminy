@@ -17,7 +17,7 @@ class mysql2json{
 		$i++;
  	}
 	 $i=0;
-	  $json="{\n\"data\": [\n";
+	  $json="[\n";
 	while($row=mysql_fetch_array($resultSet, MYSQL_NUM)) {
 		$i++;
 		//print("Ind ".$i."-$affectedRecords<br>");
@@ -41,7 +41,7 @@ class mysql2json{
 		 
 		
 	}
-	$json.="]\n};";
+	$json.="]";
 	
 	return $json;
  }
