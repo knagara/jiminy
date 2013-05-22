@@ -17,7 +17,6 @@ $table  = 'userInfo';
 if (isset($_POST["userID"]))
 {
 	$userID = mysql_real_escape_string($_POST["userID"]);
-	echo $userID;
 	$accessToken = $_POST["accessToken"];
 	
 	/* userIDとaccessTokenの照合 */
