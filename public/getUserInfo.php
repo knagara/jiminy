@@ -31,7 +31,7 @@ if (isset($_POST["userID"]))
 		/* データ をJSONで返す*/
 		include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude
 		//$result = mysql_query("select i.tagName,i.tagID,count(u.tagID) from tagInfo as i,userTag as u where categoryID = \"$categoryID\"");
-		$result = mysql_query("select * from $table where userID = $userID");
+		$result = mysql_query("select * from $table where userID = $userID LIMIT 1");
 		$num = mysql_affected_rows();
 		$objJSON = new mysql2json();
 		print(trim($objJSON->getJSON($result,$num)));

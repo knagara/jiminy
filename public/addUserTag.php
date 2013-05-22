@@ -16,7 +16,7 @@ $table  = 'userTag';
 //POST受け取り確認
 if (isset($_POST["userID"]))
 {
-	$userID = $_POST["userID"];
+	$userID = mysql_real_escape_string($_POST["userID"]);
 	$accessToken = $_POST["accessToken"];
 	
 	/* userIDとaccessTokenの照合 */
@@ -26,8 +26,8 @@ if (isset($_POST["userID"]))
 	
 	if($accessResult==0)
 	{		 
-		$tagID = $_POST["tagID"];
-		$tagComment = htmlspecialchars($_POST["tagComment"]);
+		$tagID = mysql_real_escape_string($_POST["tagID"]);
+		$tagComment = mysql_real_escape_string(htmlspecialchars($_POST["tagComment"]));
 		
 		//既に登録されているか確認
 		$result = mysql_query("select userID,tagID from $table where userID = $userID and tagID=$tagID");

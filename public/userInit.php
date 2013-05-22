@@ -29,9 +29,9 @@ if (isset($_POST["age"]))
 	$accessResult = $objCheck->check($userID,$accessToken);
 	 */
 	 
-	 $age = $_POST["age"];
-	 $sex = $_POST["sex"];
-	 $userName = htmlspecialchars($_POST["userName"]);
+	 $age = mysql_real_escape_string($_POST["age"]);
+	 $sex = mysql_real_escape_string($_POST["sex"]);
+	 $userName = mysql_real_escape_string(htmlspecialchars($_POST["userName"]));
 	 
 	 //accessToken生成
 	 //乱数
