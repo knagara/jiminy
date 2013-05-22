@@ -30,7 +30,7 @@ if (isset($_POST["userID"]))
 		
 		/* JSONで返す */
 		include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude
-		$result = mysql_query("select userInfo.userID,userInfo.userName,userInfo.loginType,userInfo.contents,userInfo.thanks,userTag.tagComment FROM userTag INNER JOIN userInfo ON userTag.userID = userInfo.userID WHERE tagID = $tagID ORDER BY thanks desc");
+		$result = mysql_query("select userInfo.userID,userInfo.userName,userInfo.loginType,userInfo.contents,userInfo.thanks,userTag.tagComment FROM userTag INNER JOIN userInfo ON userTag.userID = userInfo.userID WHERE tagID = \"$tagID\" ORDER BY thanks desc");
 		$num = mysql_affected_rows();
 		$objJSON = new mysql2json();
 		print(trim($objJSON->getJSON($result,$num)));

@@ -33,7 +33,7 @@
 				<form action="../getUserFromTag.php" method="post">
 					userID: <input type="text" name="userID"></input><br>
 					accessToken: <input type="text" name="accessToken"></input><br>
-					tagID: <input type="text" name="categoryID"></input><br>
+					tagID: <input type="text" name="tagID"></input><br>
 					<input type="submit" name="submit"></input><br>
 				</form>
 			</div>
