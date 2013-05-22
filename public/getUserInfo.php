@@ -16,7 +16,8 @@ $table  = 'userInfo';
 //POST受け取り確認
 if (isset($_POST["userID"]))
 {
-	$userID = $_POST["userID"];
+	$userID = mysql_real_escape_string($_POST["userID"]);
+	echo $userID;
 	$accessToken = $_POST["accessToken"];
 	
 	/* userIDとaccessTokenの照合 */
