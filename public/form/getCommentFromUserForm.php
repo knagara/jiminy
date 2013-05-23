@@ -13,7 +13,7 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-		<title>Form Index</title>
+		<title>Form</title>
 		<meta name="description" content="" />
 		<meta name="author" content="永良 慶太" />
 
@@ -25,16 +25,23 @@
 	</head>
 
 	<body>
-		<p>このディレクトリはリリース時にDigest認証をかけて、インターネット上からアクセス出来ないようにします。</p>
-		<p>userInitForm.php,getUserInfoForm.php,updateUserInfoForm.phpなどuserInfoテーブルに関わるファイルは削除するかも知れません。</p>
-		
-		<a href="userInitForm.php">userInitForm.php</a><br />
-		<a href="getUserInfoForm.php">getUserInfoForm.php</a><br />
-		<a href="getTagForm.php">getTagForm.php</a><br />
-		<a href="addUserTagForm.php">addUserTagForm.php</a><br />
-		<a href="getUserFromTagForm.php">getUserFromTagForm.php</a><br />
-		<a href="getTagFromUserForm.php">getTagFromUserForm.php</a><br />
-		<a href="getCommentFromUserForm.php">getCommentFromUserForm.php</a><br />
-		<a href=""></a>
+		<div>
+			<header>
+				<h1>getTagFromUserForm</h1>
+			</header>
+			<div>
+				<form action="../getTagFromUser.php" method="post">
+					userID: <input type="text" name="userID"></input><br>
+					accessToken: <input type="text" name="accessToken"></input><br>
+					<input type="submit" name="submit"></input><br>
+				</form>
+			</div>
+			
+			<br /><br />
+			<a href="./">何も追加せず戻る</a>
+
+			<footer>
+			</footer>
+		</div>
 	</body>
 </html>
