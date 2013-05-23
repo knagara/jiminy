@@ -27,10 +27,10 @@
 	<body>
 		<div>
 			<header>
-				<h1>getTagFromUserForm</h1>
+				<h1>getCommentFromUserForm</h1>
 			</header>
 			<div>
-				<form action="../getTagFromUser.php" method="post">
+				<form action="../getCommentFromUser.php" method="post">
 					userID: <input type="text" name="userID"></input><br>
 					accessToken: <input type="text" name="accessToken"></input><br>
 					<input type="submit" name="submit"></input><br>
