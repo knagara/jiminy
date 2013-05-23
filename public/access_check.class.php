@@ -2,7 +2,7 @@
 class access_check{
 	
 	function check($userID, $accessToken){
-		$result = mysql_query("select accessToken from userInfo where userID = \"$userID\"");
+		$result = mysql_query("select accessToken from userInfo where userID = $userID");
 		$row = mysql_fetch_assoc($result);
 		$getToken = $row['accessToken'];
 		
