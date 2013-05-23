@@ -30,7 +30,7 @@ if (isset($_POST["userID"]))
 		
 		/* JSONで返す */
 		include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude
-		$result = mysql_query("select comment FROM thanksComment WHERE receiverID = '$userID'");
+		$result = mysql_query("select comment FROM thanksComment WHERE receiverID = $userID");
 		$num = mysql_affected_rows();
 		$objJSON = new mysql2json();
 		print(trim($objJSON->getJSON($result,$num)));
