@@ -26,7 +26,7 @@ if (isset($_POST["userID"]))
 	
 	if($accessResult==0)
 	{		 
-		$categoryID = $_POST["userID"];
+		//$categoryID = $_POST["userID"];
 		
 		/* データ をJSONで返す*/
 		include("php/mysql2json.class.php"); //JSON整形してくれるクラスファイルinclude

@@ -27,7 +27,7 @@
 	<body>
 		<div>
 			<header>
-				<h1>getTagForm</h1>
+				<h1>getUserFromTagForm</h1>
 			</header>
 			<div>
 				<form action="../getUserFromTag.php" method="post">
