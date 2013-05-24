@@ -33,6 +33,7 @@
 				<form action="../getCommentFromUser.php" method="post">
 					userID: <input type="text" name="userID"></input><br>
 					accessToken: <input type="text" name="accessToken"></input><br>
+					sUserID: <input type="text" name="sUserID"></input><br>
 					<input type="submit" name="submit"></input><br>
 				</form>
 			</div>
